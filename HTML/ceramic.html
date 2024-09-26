@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <title>陶瓷-杜义诚</title>
+   <link rel="stylesheet" href="../fa/css/all.css">
+   <link rel="stylesheet" href="../CSS/main.css">
+   <link rel="stylesheet" href="../CSS/others.css">
+    <style>
+       header {
+           background: url(../IMG/titleBG.png) no-repeat left;
+           line-height: 3rem;
+           height: 3rem;
+       }
+        .head {
+           user-select: none;
+       }
+        .ico {
+           background: url(../IMG/index_img/3.png) center no-repeat;
+           border-radius: 50%;
+           background-size: cover;
+       }
+
+       main {
+           background-color: rgba(173, 216, 230, .5);
+       }
+        table {
+           margin: 0 auto;
+       }
+        table {
+           border-collapse: collapse;
+       }
+        tr>* {
+           border: 2px black solid;
+           width: 150px;
+           height: 50px;
+           text-align: center;
+       }
+        .headico {
+           display: inline-block;
+           width: 75%;
+           height: 75%;
+           background: url(../IMG/ceramic/1.jpg) no-repeat center;
+           background-size: cover;
+       }
+        th {
+           background-color: rgba(130, 191, 196, .8);
+           font-weight: border;
+       }
+        .inner {
+           z-index: -1;
+           opacity: 0;
+           transition: all 3s;
+           position: absolute;
+           left: 0;
+           top: 0;
+           right: 0;
+           bottom: 0;
+       }
+        .inner:first-child {
+           opacity: 1;
+           position: static;
+       }
+        .outer:active .inner:first-child {
+           opacity: 1;
+           transform: translateY(-110rem);
+            +.inner {
+               opacity: 1;
+               transform: translateY(-95rem);
+                +.inner {
+                   opacity: 1;
+                   transform: translateY(-80rem);
+                    +.inner {
+                       opacity: 1;
+                       transform: translateY(-65rem);
+                        +.inner {
+                           opacity: 1;
+                           transform: translateY(-50rem);
+                            +.inner {
+                               opacity: 1;
+                               transform: translateY(0);
+                           }
+                       }
+                   }
+               }
+           }
+       }
+        .outer {
+           overflow: hidden;
+       }
+   </style>
+</head>
+<body>
+   <navigation>
+       <div class="nav">
+           <a href="../index.html">
+               <div class="navin"></div>
+           </a>
+       </div>
+   </navigation>
+   <header>
+       <div class="logo"></div>
+       <span id="backHome">话聊传统文化</span>
+   </header>
+   <main>
+       <div class="head">
+           <div class="ico"></div>
+           <span id="title" id="p0">陶瓷鉴赏（单击或长按图片查看细节）</span>
+       </div>
+       <article>
+           <div class="outer">
+               <div class="inner">
+                   <table>
+                       <th colspan="7" id="p1">珍品基本资料</th>
+                       <tr>
+                           <td>名字</td>
+                           <td>???</td>
+                           <td>年代</td>
+                           <td>???</td>
+                           <td>出土地</td>
+                           <td>???</td>
+                           <td rowspan="4">
+                               <div class="headico"></div>
+                               <script>let ele = document.querySelector(".headico")
+                                   ele.addEventListener("click", () => {
+                                       let bg = document.createElement("div");
+                                       bg.style.cssText += "background-color: rgba(128, 128, 128,.5);position: absolute;top: 0;left: 0;width: 100%;height: 100vh; z-index: 9;"
+                                       document.body.append(bg);
+                                       let inBg = document.createElement("div");
+                                       inBg.style.cssText += "background: url(../IMG/ceramic/1.jpg) no-repeat center;background-size: cover;position: absolute;width: 75%;height: 75%; z-index: 10;top: 0;left: 0;bottom: 0;right: 0;margin: auto;"
+                                       bg.append(inBg);
+                                       bg.addEventListener("click", bg.remove)
+                                   })</script>
+                           </td>
+                       </tr>
+                       <tr>
+                           <td>作用</td>
+                           <td colspan="2">???</td>
+                           <td>历史意义</td>
+                           <td colspan="2">???</td>
+                       </tr>
+                       <tr>
+                           <td>鉴宝员</td>
+                           <td>???</td>
+                           <td>保存状况</td>
+                           <td>???</td>
+                           <td>价值</td>
+                           <td>???</td>
+                       </tr>
+                       <tr>
+                           <td>保存地点</td>
+                           <td colspan="5">???</td>
+                       </tr>
+                       <tr>
+                           <th colspan="7" id="p2">额外资料</th>
+                       </tr>
+                       <tr>
+                           <td>鉴宝员批注</td>
+                           <td colspan="6">???</td>
+                       </tr>
+                       <tr>
+                           <td>其他注意事项</td>
+                           <td colspan="6" rowspan="2">???</td>
+                       </tr>
+                       <tr>
+                           <td>_________</td>
+                       </tr>
+                   </table>
+               </div>
+               <div class="inner"
+                   style="background: url(../IMG/ceramic/2.jpg) no-repeat center;background-size: cover;"></div>
+               <div class="inner"
+                   style="background: url(../IMG/ceramic/3.jpg) no-repeat center;background-size: cover;"></div>
+               <div class="inner"
+                   style="background: url(../IMG/ceramic/4.jpg) no-repeat center;background-size: cover;"></div>
+               <div class="inner"
+                   style="background: url(../IMG/ceramic/5.jpg) no-repeat center;background-size: cover;"></div>
+               <div class="inner"
+                   style="background: url(../IMG/ceramic/1.jpg) no-repeat center;background-size: cover;">
+               </div>
+           </div>
+           </div>
+           <p>我要提交资料？</p>
+           <form>
+               <input type="file" name="introduce" id="">
+               <button type="submit" style="float: right;">提交</button>
+           </form>
+       </article>
+       <a href="#">
+           <div class="backTo fas fa-angle-up"></div>
+       </a>
+       <a href="../index.html">
+           <div class="backTo fas fa-home" style="bottom: 7rem;"></div>
+       </a>
+   </main>
+   <footer>
+       <p>2212630630杜义诚</p>
+   </footer>
+</body>
+<script type="text/javascript" src="../JS/main.js"></script>
+</html>
