@@ -1,0 +1,79 @@
+.ico {
+   width: 5rem;
+   height: 5rem;
+   float: left;
+   margin-right: 2rem;
+}
+#title {
+   font-size: 3rem;
+   font-weight: bolder;
+   font-style: italic;
+}
+.head {
+   position: absolute;
+   top: -1.5rem;
+   left: -1.5rem;
+}
+.head>* {
+   float: left;
+   line-height: 7rem;
+   text-decoration: underline solid black 2px;
+}
+.head::after {
+   content: "";
+   display: block;
+   clear: both;
+}
+main {
+   position: relative;
+   width: 80%;
+   margin: 0 auto;
+   margin-top: 2%;
+   padding-bottom: 2rem;
+}
+article {
+   overflow: hidden;
+}
+article>pre {
+   overflow: scroll;
+}
+.head+article::before {
+   content: "";
+   display: block;
+   margin-top: 4rem;
+}
+.fenge {
+   margin-top: 2rem;
+   background-color: black;
+   height: 2px;
+}
+.nav,
+.navin {
+   overflow: hidden;
+   z-index: 9;
+   width: 9rem;
+   height: 9rem;
+   float: right;
+   position: relative;
+   transform-origin: right top;
+}
+.navin {
+   transform: translate(25%, -25%);
+   position: absolute;
+   background: url(../IMG/face.png) no-repeat center;
+   background-size: cover;
+}
+.nav:hover .navin {
+   animation: nav 3s infinite;
+}
+@keyframes nav {
+   0% {
+       transform: translate(25%, -25%) scale(1);
+   }
+    50% {
+       transform: translate(25%, -25%) scale(0.5);
+   }
+    100% {
+       transform: translate(25%, -25%) scale(1);
+   }
+}
